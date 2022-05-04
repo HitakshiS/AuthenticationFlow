@@ -19,6 +19,12 @@ const globalStyles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  flexCenterPurple: {
+    flex: 1,
+    backgroundColor: colors.PURPLE_DOT_VW,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   flexRow: {
     flexDirection: 'row',
     alignItems: 'center',

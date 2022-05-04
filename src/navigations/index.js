@@ -31,12 +31,13 @@ const AppNavigator = () => {
         <SafeAreaProvider>
             <NavigationContainer>
                 <Drawer.Navigator
-                    initialRouteName="HomeNav"
+                    initialRouteName="Splash"
                     drawerContent={(props) => <CustomDrawerContent {...props} />
                     }
                 >
+                    <Drawer.Screen name="Splash" component={Splash} options={{ headerShown: false }} />
                     <Drawer.Screen name="HomeNav" component={Dashboard} />
-                    <Drawer.Screen name="main" component={MainStackNav} />
+                    {/* <Drawer.Screen name="main" component={MainStackNav} /> */}
                     <Drawer.Screen name="AuthNav" component={AuthNav} options={{ headerShown: false }} />
                 </Drawer.Navigator>
             </NavigationContainer>
@@ -50,7 +51,7 @@ const MainStackNav = () => {
             screenOptions={{ headerShown: false, gestureEnabled: true }}
         >
             <AppStack.Screen name="Splash" component={Splash} />
-            <AppStack.Screen name="AuthNav" component={AuthNav} />
+            <AppStack.Screen name="AuthNav" component={AuthNav} options={{ headerShown: false }} />
             <AppStack.Screen name="HomeNav" component={Dashboard} />
         </AppStack.Navigator>
     );

@@ -16,9 +16,9 @@ const Splash = ({ navigation }) => {
 
         const goToFun = async () => {
             if (userData)
-                navigation.replace('HomeNav');
+                navigation.navigate('HomeNav');
             else
-                navigation.replace('AuthNav');
+                navigation.navigate('AuthNav');
         };
         const timer = setTimeout(goToFun, TIMER_SECS);
 
@@ -31,7 +31,7 @@ const Splash = ({ navigation }) => {
     }, []);
 
     return (
-        <View style={[globalStyles.flexCenterGrey]}>
+        <View style={[globalStyles.flexCenterPurple]}>
             <Text style={[globalStyles.textPrimary18]}>
                 {strings.SPLASH}
             </Text>
